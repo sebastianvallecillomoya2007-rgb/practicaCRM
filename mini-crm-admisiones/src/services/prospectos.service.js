@@ -7,11 +7,13 @@ const rutaArchivo = path.join(
     "../data/prospectos.json"
 );
 
+// Obtener todos los prospectos
 function obtenerTodos() {
     const contenido = fs.readFileSync(rutaArchivo, "utf8");
     return JSON.parse(contenido);
 }
 
+// Guardar todos los prospectos
 function guardarTodos(prospectos) {
     fs.writeFileSync(
         rutaArchivo,
@@ -20,6 +22,7 @@ function guardarTodos(prospectos) {
     );
 }
 
+// Crear un nuevo prospecto
 function crearProspecto(datos) {
     const prospectos = obtenerTodos();
 
@@ -28,9 +31,13 @@ function crearProspecto(datos) {
         return Math.max(maximo, numero);
     }, 0);
 
-    const nuevoNumero = (ultimoNumero + 1).toString().padStart(3, "0");
+    const nuevoNumero = (ultimoNumero + 1)
+        .toString()
+        .padStart(3, "0");
 
-    const fechaActual = new Date().toISOString().split("T")[0];
+    const fechaActual = new Date()
+        .toISOString()
+        .split("T")[0];
 
     const nuevoProspecto = {
         id: `P${nuevoNumero}`,
@@ -47,6 +54,7 @@ function crearProspecto(datos) {
     return nuevoProspecto;
 }
 
+// Actualizar la etapa de un prospecto
 function actualizarEtapa(id, nuevaEtapa) {
     const prospectos = obtenerTodos();
 
@@ -57,6 +65,7 @@ function actualizarEtapa(id, nuevaEtapa) {
     }
 
     prospecto.etapa = nuevaEtapa;
+
     prospecto.fechaUltimoAvance = new Date()
         .toISOString()
         .split("T")[0];
@@ -66,13 +75,7 @@ function actualizarEtapa(id, nuevaEtapa) {
     return prospecto;
 }
 
-module.exports = {
-    obtenerTodos,
-    crearProspecto,
-    actualizarEtapa
-};
-
-
+// Obtener métricas del embudo CRM
 function obtenerMetricas() {
     const prospectos = obtenerTodos();
 
@@ -96,19 +99,32 @@ function obtenerMetricas() {
         prospecto => prospecto.etapa === "Convertido"
     ).length;
 
+    // Contar prospectos perdidos
+    const perdidos = prospectos.filter(
+        prospecto => prospecto.etapa === "Perdido"
+    ).length;
+
     // Calcular porcentaje de conversión
     const conversion = totalProspectos > 0
         ? ((convertidos / totalProspectos) * 100).toFixed(2)
+        : "0.00";
+
+    // Calcular porcentaje de fuga
+    const fuga = totalProspectos > 0
+        ? ((perdidos / totalProspectos) * 100).toFixed(2)
         : "0.00";
 
     return {
         totalProspectos,
         etapas,
         convertidos,
-        conversion: `${conversion}%`
+        perdidos,
+        conversion: `${conversion}%`,
+        fuga: `${fuga}%`
     };
 }
 
+// Exportar funciones del servicio
 module.exports = {
     obtenerTodos,
     crearProspecto,

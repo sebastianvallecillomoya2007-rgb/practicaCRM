@@ -1,21 +1,19 @@
 
 const express = require("express");
+const path = require("path");
 
 const app = express();
 
+// Importar rutas
 const prospectosRoutes = require("./routes/prospectos.routes");
+const embudoRoutes = require("./routes/embudo.routes");
+const atencionRoutes = require("./routes/atencion.routes");
 
 // Permitir recibir JSON
 app.use(express.json());
 
-// Ruta inicial
-app.get("/", (req, res) => {
-    res.json({
-        mensaje: "Mini-CRM de admisiones con IA",
-        estado: "Funcionando",
-        version: "1.0.0"
-    });
-});
+// Publicar los archivos HTML, CSS y JavaScript
+app.use(express.static(path.join(__dirname, "../public")));
 
 // Comprobar servidor
 app.get("/api/health", (req, res) => {
@@ -28,8 +26,10 @@ app.get("/api/health", (req, res) => {
 // Rutas de prospectos
 app.use("/prospectos", prospectosRoutes);
 
-const embudoRoutes = require("./routes/embudo.routes");
-
+// Ruta del embudo
 app.use("/", embudoRoutes);
+
+// Ruta de atención
+app.use("/", atencionRoutes);
 
 module.exports = app;

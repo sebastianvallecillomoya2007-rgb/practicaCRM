@@ -1,0 +1,303 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini CRM | Admisiones</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-layout">
+
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-icon">C</div>
+                <div>
+                    <h2>Campus CRM</h2>
+                    <span>Gestión de admisiones</span>
+                </div>
+            </div>
+
+            <div class="menu-label">MENÚ PRINCIPAL</div>
+
+            <nav class="navigation">
+                <a href="#dashboard" class="nav-link active">
+                    <span>▦</span> Panel principal
+                </a>
+                <a href="#prospectos" class="nav-link">
+                    <span>♙</span> Prospectos
+                </a>
+                <a href="#atencion" class="nav-link">
+                    <span>◷</span> Seguimiento
+                </a>
+                <a href="#embudo" class="nav-link">
+                    <span>▥</span> Embudo CRM
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="system-status">
+                    <span class="status-dot"></span>
+                    <div>
+                        <strong>CRM activo</strong>
+                        <small>Panel de admisiones</small>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">SISTEMA DE GESTIÓN</p>
+                    <h1>Panel de admisiones</h1>
+                </div>
+
+                <button class="refresh-button" id="btnActualizar">
+                    ↻ Actualizar datos
+                </button>
+            </header>
+
+            <section id="dashboard">
+                <div class="welcome-section">
+                    <div>
+                        <h2>Resumen general</h2>
+                        <p>Consulta el estado de tus prospectos y el rendimiento del proceso de admisión.</p>
+                    </div>
+                    <span class="date-label" id="fechaActual"></span>
+                </div>
+
+                <div class="stats-grid">
+                    <article class="stat-card">
+                        <div class="stat-top">
+                            <span>Total de prospectos</span>
+                            <span class="stat-icon blue">♙</span>
+                        </div>
+                        <h2 id="totalProspectos">--</h2>
+                        <small>Registros en el CRM</small>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-top">
+                            <span>Convertidos</span>
+                            <span class="stat-icon green">✓</span>
+                        </div>
+                        <h2 id="totalConvertidos">--</h2>
+                        <small>Prospectos convertidos</small>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-top">
+                            <span>Perdidos</span>
+                            <span class="stat-icon red">×</span>
+                        </div>
+                        <h2 id="totalPerdidos">--</h2>
+                        <small>Prospectos perdidos</small>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-top">
+                            <span>Tasa de conversión</span>
+                            <span class="stat-icon purple">%</span>
+                        </div>
+                        <h2 id="tasaConversion">--</h2>
+                        <small>Conversión general</small>
+                    </article>
+                </div>
+            </section>
+
+            <section class="content-section" id="prospectos">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">GESTIÓN DE CLIENTES</p>
+                        <h2>Prospectos</h2>
+                        <p>Registra nuevos interesados y administra sus etapas.</p>
+                    </div>
+                </div>
+
+                <div class="panel form-panel">
+                    <h3>Registrar nuevo prospecto</h3>
+
+                    <form id="formProspecto">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="sede">Sede</label>
+                                <input
+                                    type="text"
+                                    id="sede"
+                                    placeholder="Ej. San José"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="canal">Canal de ingreso</label>
+                                <select id="canal" required>
+                                    <option value="">Seleccionar canal</option>
+                                    <option value="Facebook">Facebook</option>
+                                    <option value="Instagram">Instagram</option>
+                                    <option value="WhatsApp">WhatsApp</option>
+                                    <option value="Página web">Página web</option>
+                                    <option value="Referido">Referido</option>
+                                    <option value="Presencial">Presencial</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group form-button">
+                                <label>&nbsp;</label>
+                                <button type="submit" class="primary-button">
+                                    + Registrar prospecto
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <p id="mensajeFormulario" class="form-message"></p>
+                </div>
+
+                <div class="panel table-panel">
+                    <div class="table-heading">
+                        <div>
+                            <h3>Listado de prospectos</h3>
+                            <p>Consulta y actualiza el estado de cada registro.</p>
+                        </div>
+
+                        <input
+                            type="search"
+                            id="buscarProspecto"
+                            placeholder="Buscar por ID, sede o canal..."
+                        >
+                    </div>
+
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Sede</th>
+                                    <th>Canal</th>
+                                    <th>Etapa</th>
+                                    <th>Último avance</th>
+                                    <th>Actualizar etapa</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablaProspectos">
+                                <tr>
+                                    <td colspan="6" class="empty-message">
+                                        Cargando prospectos...
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section" id="embudo">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">RENDIMIENTO</p>
+                        <h2>Embudo de admisiones</h2>
+                        <p>Distribución de prospectos según su etapa actual.</p>
+                    </div>
+                </div>
+
+                <div class="panel funnel-panel">
+                    <div class="funnel-header">
+                        <h3>Prospectos por etapa</h3>
+                        <span>Datos del CRM</span>
+                    </div>
+
+                    <div id="graficoEmbudo" class="funnel-list">
+                        <p class="empty-message">Cargando métricas...</p>
+                    </div>
+
+                    <div class="funnel-footer">
+                        <div>
+                            <span>Conversión</span>
+                            <strong id="embudoConversion">--</strong>
+                        </div>
+                        <div>
+                            <span>Fuga</span>
+                            <strong id="embudoFuga">--</strong>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section" id="atencion">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">CONTROL DE SEGUIMIENTO</p>
+                        <h2>Atención de prospectos</h2>
+                        <p>Identifica cuáles necesitan seguimiento o atención prioritaria.</p>
+                    </div>
+                </div>
+
+                <div class="attention-summary">
+                    <article class="attention-card warning">
+                        <span>Requieren atención</span>
+                        <strong id="requierenAtencion">--</strong>
+                    </article>
+
+                    <article class="attention-card pending">
+                        <span>Seguimiento pendiente</span>
+                        <strong id="seguimientoPendiente">--</strong>
+                    </article>
+
+                    <article class="attention-card normal">
+                        <span>Total revisados</span>
+                        <strong id="totalAtencion">--</strong>
+                    </article>
+                </div>
+
+                <div class="panel table-panel">
+                    <div class="table-heading">
+                        <div>
+                            <h3>Estado de seguimiento</h3>
+                            <p>Días transcurridos desde el último avance.</p>
+                        </div>
+                    </div>
+
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Sede</th>
+                                    <th>Etapa</th>
+                                    <th>Último avance</th>
+                                    <th>Días sin avance</th>
+                                    <th>Estado de atención</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablaAtencion">
+                                <tr>
+                                    <td colspan="6" class="empty-message">
+                                        Cargando información...
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <span>Campus CRM · Sistema de gestión de admisiones</span>
+                <span>Panel administrativo</span>
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
