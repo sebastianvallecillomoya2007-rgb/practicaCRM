@@ -1,0 +1,330 @@
+[
+  {
+    "id": "P001",
+    "sede": "Puntarenas",
+    "canal": "Página web",
+    "etapa": "Prospecto",
+    "fechaIngreso": "2026-11-11",
+    "fechaUltimoAvance": "2026-11-17"
+  },
+  {
+    "id": "P002",
+    "sede": "Desamparados",
+    "canal": "Referido",
+    "etapa": "Prospecto",
+    "fechaIngreso": "2026-11-07",
+    "fechaUltimoAvance": "2026-11-14"
+  },
+  {
+    "id": "P003",
+    "sede": "Puntarenas",
+    "canal": "Evento",
+    "etapa": "Prospecto",
+    "fechaIngreso": "2026-11-03",
+    "fechaUltimoAvance": "2026-11-11"
+  },
+  {
+    "id": "P004",
+    "sede": "Desamparados",
+    "canal": "Redes sociales",
+    "etapa": "Prospecto",
+    "fechaIngreso": "2026-10-30",
+    "fechaUltimoAvance": "2026-11-08"
+  },
+  {
+    "id": "P005",
+    "sede": "Puntarenas",
+    "canal": "Página web",
+    "etapa": "Prospecto",
+    "fechaIngreso": "2026-10-26",
+    "fechaUltimoAvance": "2026-11-05"
+  },
+  {
+    "id": "P006",
+    "sede": "Desamparados",
+    "canal": "Referido",
+    "etapa": "Prospecto",
+    "fechaIngreso": "2026-11-07",
+    "fechaUltimoAvance": "2026-11-18"
+  },
+  {
+    "id": "P007",
+    "sede": "Puntarenas",
+    "canal": "Evento",
+    "etapa": "Prospecto",
+    "fechaIngreso": "2026-11-03",
+    "fechaUltimoAvance": "2026-11-15"
+  },
+  {
+    "id": "P008",
+    "sede": "Desamparados",
+    "canal": "Redes sociales",
+    "etapa": "Prospecto",
+    "fechaIngreso": "2026-10-30",
+    "fechaUltimoAvance": "2026-11-12"
+  },
+  {
+    "id": "P009",
+    "sede": "Puntarenas",
+    "canal": "Página web",
+    "etapa": "Candidato",
+    "fechaIngreso": "2026-10-26",
+    "fechaUltimoAvance": "2026-11-09"
+  },
+  {
+    "id": "P010",
+    "sede": "Desamparados",
+    "canal": "Referido",
+    "etapa": "Candidato",
+    "fechaIngreso": "2026-10-22",
+    "fechaUltimoAvance": "2026-11-06"
+  },
+  {
+    "id": "P011",
+    "sede": "Puntarenas",
+    "canal": "Evento",
+    "etapa": "Candidato",
+    "fechaIngreso": "2026-11-03",
+    "fechaUltimoAvance": "2026-11-19"
+  },
+  {
+    "id": "P012",
+    "sede": "Desamparados",
+    "canal": "Redes sociales",
+    "etapa": "Candidato",
+    "fechaIngreso": "2026-10-30",
+    "fechaUltimoAvance": "2026-11-16"
+  },
+  {
+    "id": "P013",
+    "sede": "Puntarenas",
+    "canal": "Página web",
+    "etapa": "Candidato",
+    "fechaIngreso": "2026-10-26",
+    "fechaUltimoAvance": "2026-11-13"
+  },
+  {
+    "id": "P014",
+    "sede": "Desamparados",
+    "canal": "Referido",
+    "etapa": "Candidato",
+    "fechaIngreso": "2026-10-22",
+    "fechaUltimoAvance": "2026-11-10"
+  },
+  {
+    "id": "P015",
+    "sede": "Puntarenas",
+    "canal": "Evento",
+    "etapa": "Candidato",
+    "fechaIngreso": "2026-10-18",
+    "fechaUltimoAvance": "2026-11-07"
+  },
+  {
+    "id": "P016",
+    "sede": "Desamparados",
+    "canal": "Redes sociales",
+    "etapa": "Agenda Campus Day",
+    "fechaIngreso": "2026-10-30",
+    "fechaUltimoAvance": "2026-11-20"
+  },
+  {
+    "id": "P017",
+    "sede": "Puntarenas",
+    "canal": "Página web",
+    "etapa": "Agenda Campus Day",
+    "fechaIngreso": "2026-10-26",
+    "fechaUltimoAvance": "2026-11-17"
+  },
+  {
+    "id": "P018",
+    "sede": "Desamparados",
+    "canal": "Referido",
+    "etapa": "Agenda Campus Day",
+    "fechaIngreso": "2026-10-22",
+    "fechaUltimoAvance": "2026-11-14"
+  },
+  {
+    "id": "P019",
+    "sede": "Puntarenas",
+    "canal": "Evento",
+    "etapa": "Agenda Campus Day",
+    "fechaIngreso": "2026-10-18",
+    "fechaUltimoAvance": "2026-11-11"
+  },
+  {
+    "id": "P020",
+    "sede": "Desamparados",
+    "canal": "Redes sociales",
+    "etapa": "Agenda Campus Day",
+    "fechaIngreso": "2026-11-03",
+    "fechaUltimoAvance": "2026-11-08"
+  },
+  {
+    "id": "P021",
+    "sede": "Puntarenas",
+    "canal": "Página web",
+    "etapa": "Agenda Campus Day",
+    "fechaIngreso": "2026-10-30",
+    "fechaUltimoAvance": "2026-11-05"
+  },
+  {
+    "id": "P022",
+    "sede": "Desamparados",
+    "canal": "Referido",
+    "etapa": "Agenda Campus Day",
+    "fechaIngreso": "2026-11-11",
+    "fechaUltimoAvance": "2026-11-18"
+  },
+  {
+    "id": "P023",
+    "sede": "Puntarenas",
+    "canal": "Evento",
+    "etapa": "Agenda Campus Day",
+    "fechaIngreso": "2026-11-07",
+    "fechaUltimoAvance": "2026-11-15"
+  },
+  {
+    "id": "P024",
+    "sede": "Desamparados",
+    "canal": "Redes sociales",
+    "etapa": "Asiste Campus Day",
+    "fechaIngreso": "2026-11-03",
+    "fechaUltimoAvance": "2026-11-12"
+  },
+  {
+    "id": "P025",
+    "sede": "Puntarenas",
+    "canal": "Página web",
+    "etapa": "Asiste Campus Day",
+    "fechaIngreso": "2026-10-30",
+    "fechaUltimoAvance": "2026-11-09"
+  },
+  {
+    "id": "P026",
+    "sede": "Desamparados",
+    "canal": "Referido",
+    "etapa": "Asiste Campus Day",
+    "fechaIngreso": "2026-10-26",
+    "fechaUltimoAvance": "2026-11-06"
+  },
+  {
+    "id": "P027",
+    "sede": "Puntarenas",
+    "canal": "Evento",
+    "etapa": "Prueba Técnica",
+    "fechaIngreso": "2026-11-07",
+    "fechaUltimoAvance": "2026-11-19"
+  },
+  {
+    "id": "P028",
+    "sede": "Desamparados",
+    "canal": "Redes sociales",
+    "etapa": "Prueba Técnica",
+    "fechaIngreso": "2026-11-03",
+    "fechaUltimoAvance": "2026-11-16"
+  },
+  {
+    "id": "P029",
+    "sede": "Puntarenas",
+    "canal": "Página web",
+    "etapa": "Prueba Técnica",
+    "fechaIngreso": "2026-10-30",
+    "fechaUltimoAvance": "2026-11-13"
+  },
+  {
+    "id": "P030",
+    "sede": "Desamparados",
+    "canal": "Referido",
+    "etapa": "Prueba Técnica",
+    "fechaIngreso": "2026-10-26",
+    "fechaUltimoAvance": "2026-11-10"
+  },
+  {
+    "id": "P031",
+    "sede": "Puntarenas",
+    "canal": "Evento",
+    "etapa": "Entrevista",
+    "fechaIngreso": "2026-10-22",
+    "fechaUltimoAvance": "2026-11-07"
+  },
+  {
+    "id": "P032",
+    "sede": "Desamparados",
+    "canal": "Redes sociales",
+    "etapa": "Entrevista",
+    "fechaIngreso": "2026-11-03",
+    "fechaUltimoAvance": "2026-11-20"
+  },
+  {
+    "id": "P033",
+    "sede": "Puntarenas",
+    "canal": "Página web",
+    "etapa": "Entrevista",
+    "fechaIngreso": "2026-10-30",
+    "fechaUltimoAvance": "2026-11-17"
+  },
+  {
+    "id": "P034",
+    "sede": "Desamparados",
+    "canal": "Referido",
+    "etapa": "Admitido",
+    "fechaIngreso": "2026-10-26",
+    "fechaUltimoAvance": "2026-11-14"
+  },
+  {
+    "id": "P035",
+    "sede": "Puntarenas",
+    "canal": "Evento",
+    "etapa": "Admitido",
+    "fechaIngreso": "2026-10-22",
+    "fechaUltimoAvance": "2026-11-11"
+  },
+  {
+    "id": "P036",
+    "sede": "Desamparados",
+    "canal": "Redes sociales",
+    "etapa": "Semana de Prueba",
+    "fechaIngreso": "2026-10-18",
+    "fechaUltimoAvance": "2026-11-08"
+  },
+  {
+    "id": "P037",
+    "sede": "Puntarenas",
+    "canal": "Página web",
+    "etapa": "Semana de Prueba",
+    "fechaIngreso": "2026-10-14",
+    "fechaUltimoAvance": "2026-11-05"
+  },
+  {
+    "id": "P038",
+    "sede": "Desamparados",
+    "canal": "Referido",
+    "etapa": "Estudiante",
+    "fechaIngreso": "2026-10-26",
+    "fechaUltimoAvance": "2026-11-18"
+  },
+  {
+    "id": "P039",
+    "sede": "Puntarenas",
+    "canal": "Evento",
+    "etapa": "Estudiante",
+    "fechaIngreso": "2026-10-22",
+    "fechaUltimoAvance": "2026-11-15"
+  },
+  {
+    "id": "P040",
+    "sede": "Desamparados",
+    "canal": "Redes sociales",
+    "etapa": "Estudiante",
+    "fechaIngreso": "2026-11-07",
+    "fechaUltimoAvance": "2026-11-12"
+  },
+  {
+    "id": "P041",
+    "sede": "Desamparados",
+    "canal": "Redes sociales",
+    "etapa": "Candidato",
+    "fechaIngreso": "2026-11-20",
+    "fechaUltimoAvance": "2026-11-20"
+  }
+]
